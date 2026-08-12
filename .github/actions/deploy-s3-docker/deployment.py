@@ -2,6 +2,10 @@ import os
 import boto3
 import mimetypes
 from botocore.config import Config
+print("=== ENV VARS ===")
+for k in sorted(os.environ):
+    if k.startswith("INPUT"):
+        print(k, "=", os.environ[k])
 
 
 def run():
